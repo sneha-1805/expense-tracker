@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cash-Flow Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>💰 Cash-Flow</h1>
+    <button id="darkModeToggle">🌙</button>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+
+    <div class="card">
+      <h3>Total Salary</h3>
+      <p id="salaryDisplay">₹0</p>
+    </div>
+
+    <div class="card">
+      <h3>Total Expenses</h3>
+      <p id="expenseDisplay">₹0</p>
+    </div>
+
+    <div class="card">
+      <h3>Remaining Balance</h3>
+      <p id="balanceDisplay">₹0</p>
+    </div>
+
+  </div>
+
+  <!-- Salary Input -->
+  <div class="salary-section">
+    <input type="number" id="salaryInput" placeholder="Enter Salary">
+    <button id="setSalaryBtn">Set Salary</button>
+  </div>
+
+  <!-- Expense Form -->
+  <div class="expense-form">
+    <input type="text" id="expenseName" placeholder="Expense Name">
+    <input type="number" id="expenseAmount" placeholder="Expense Amount">
+    <button id="addExpenseBtn">Add Expense</button>
+  </div>
+
+  <!-- Expense List -->
+  <div class="expense-list-container">
+    <h2>Expense List</h2>
+    <ul id="expenseList"></ul>
+  </div>
+
+  <!-- Chart -->
+  <div class="chart-container">
+    <canvas id="expenseChart"></canvas>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
